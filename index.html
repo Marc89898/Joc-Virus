@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Virus</title>
+    <link rel="shorcut icon" href="./Images/virus_silueta.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--------------------------------------------------- Pagina Principal ------------------------------------------->
+    <div id="desktop_play">
+        <div id="buto_jugar">JUGAR</div>
+    </div>
+
+    <!------------------------------------------- Pagina en cas de dos jugadors--------------------------------------->
+    <div class="desktop" id="fondo_1">
+        <!-- JUGADOR 1-->
+        <div id="jugador1_div">
+            <div id="jugador1_logo"><img src="./Images/jugador1_image.png" alt=""></div>
+        </div>
+        <div id="div_organs1">
+            <div id="taula_organs1">
+                <div id="lloc_1_jugador1" class="carta_taula1"></div>
+                <div id="lloc_2_jugador1" class="carta_taula1"></div>
+                <div id="lloc_3_jugador1" class="carta_taula1"></div>
+                <div id="lloc_4_jugador1" class="carta_taula1"></div>
+            </div>
+        </div>
+        <div id="div_ma1">
+            <div id="ma1">
+                <div class="carta1"></div>
+                <div class="carta1"></div>
+                <div class="carta1"></div>
+            </div>
+        </div>
+        <!-- JUGADOR 2-->
+        <div id="jugador2_logo"><img src="./Images/jugador2_image.png" alt=""></div>
+        <div id="div_organs2">
+            <div id="taula_organs2">
+                <div id="lloc_1_jugador2" class="carta_taula2"></div>
+                <div id="lloc_2_jugador2" class="carta_taula2"></div>
+                <div id="lloc_3_jugador2" class="carta_taula2"></div>
+                <div id="lloc_4_jugador2" class="carta_taula2"></div>
+            </div>
+        </div>
+        <div id="div_ma2">
+            <div id="ma2">
+                <div class="carta2"></div>
+                <div class="carta2"></div>
+                <div class="carta2"></div>
+            </div>
+        </div>
+        <!-- BARALLA DE CARTES -->
+        <div id="div_baralla" >
+            <div id="baralla">
+                <img src="./Images/Baralla.png" alt="">
+            </div>
+        </div>
+        <!-- LLista d'esdeveniments del joc -->
+         <div id="div_llista">
+             <div id="llista"></div>
+         </div>
+        <!-- Basureta -->
+        <div id="div_basureta">
+            <div id="basureta"></div>
+        </div>
+    </div>
+
+    <!------------------------------------------- Segona pagina dos jugadors + maquina ------------------------------->
+    <div class="desktop" id="fondo_2">
+        <div id="jugador1_div_pagina2">
+            <div id="jugador1_logo_pagina2">
+
+            </div>
+        </div>
+        <div id="jugador2_logo_pagina2"></div>
+        <div id="maquina_logo"></div>
+    </div>
+
+    <!-- Pagina en cas de jugador vs maquina -->
+    <div class="desktop" id="fondo_3">
+        <div id="computer_logo"></div>
+        <div id="jugador1_logo_pagina3"></div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

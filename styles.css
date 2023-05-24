@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+}
+body {
+    overflow: hidden;
+}
+
+/**
+* Primera pagina de carga del joc
+**/
+.carta_taula1 {
+    position: relative;
+}
+.carta_taula1 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.carta_taula2 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.carta_taula1 img:nth-child(2) {
+    z-index: 1;
+    margin-top: -90%;
+    margin-left: 20%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5%;
+}
+#desktop_play {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./Images/pantalla_jugar.png");
+    background-size: cover;
+}
+
+#buto_jugar {
+    box-sizing: border-box;
+    position: absolute;
+    width: 412px;
+    height: 124px;
+    left: 755px;
+    top: 471px;
+    background: linear-gradient(180deg, #AE9F1A 0%, #000000 150%);
+    border: 2px solid #000000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    color: #FFFFFF;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#buto_jugar:hover {
+    cursor: pointer;
+}
+/**
+* ---------------------- Pagina de dos jugadors ------------------------------------------------
+**/
+#fondo_1 {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./Images/fondo_jugadores2.png");
+    background-size: cover;
+    background-position: center;
+}
+#carta_carta {
+    width: 7vw;
+    height: 17vh;
+    border: none;
+}
+#virus {
+    transform: translateY(-50px);
+}
+/**
+* Fem tot del primer Jugador
+**/
+#jugador1_div {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   margin: 10px;
+}
+#jugador1_logo {
+    width: 17vw;
+    height: 32vh;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#div_organs2 {
+    position: absolute;
+    top: 0;
+    left: 17%;
+}
+#taula_organs2 {
+    width: 35vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3%;
+}
+.carta_taula2 {
+    width: 7vw;
+    height: 17vh;
+    background-image: url("Images/carta_taula.svg");
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.carta_taula2 img {
+    position: relative;
+}
+
+.carta_taula2 img:nth-child(2) {
+    z-index: 1;
+    margin-top: -90%;
+    margin-left: 20%;
+}
+#div_ma2 {
+    position: absolute;
+    top: 35vh;
+}
+#ma2 {
+    display: grid;
+    grid-template-rows: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+.carta2 {
+    width: 7vw;
+    height: 17vh;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    z-index: 3;
+}
+.carta2:nth-of-type(1){
+    transform: rotate(0deg);
+}
+.carta2:nth-of-type(2){
+    transform: rotate(-15deg);
+    margin-top: -10px;
+    margin-left: 20px;
+}
+.carta2:nth-of-type(3){
+    margin-top: -18%;
+    transform: rotate(-35deg);
+}
+/**
+* Fem tot del primer jugador
+**/
+#jugador2_logo {
+    max-height: 100%;
+    max-width: 100%;
+    width: 17vw;
+    height: 32vh;
+}
+#div_organs1 {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    margin-bottom: 15px;
+}
+#taula_organs1 {
+    width: 35vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3%;
+}
+.carta_taula1 {
+    width: 7vw;
+    height: 17vh;
+    background-image: url("Images/carta_taula.svg");
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#div_ma1 {
+    position: absolute;
+    top: 50vh;
+    right: 0vw;
+
+}
+#ma1 {
+    display: grid;
+    grid-template-rows: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+.carta1 {
+    width: 7vw;
+    height: 17vh;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    z-index: 3;
+}
+.carta1:nth-of-type(3){
+    transform: rotate(0deg);
+    margin-top: -5%;
+
+}
+.carta1:nth-of-type(2){
+    transform: rotate(-15deg);
+    margin-top: -6px;
+    margin-right: 25px;
+}
+.carta1:nth-of-type(1){
+    margin-top: 15%;
+    transform: rotate(-35deg);
+}
+#div_baralla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 44%;
+    top: 41%;
+}
+#baralla {
+    width: 11vw;
+    height: 19vh;
+}
+#baralla:hover {
+    cursor: pointer;
+}
+#div_basureta {
+    position: absolute;
+    bottom: 3%;
+    left: 2%;
+    width: 8%;
+    height: 15%;
+    background-image: url("/Images/trash.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/**
+* --------------------------------------------- Pagina de dos jugadors + maquina ---------------------------------
+**/
+#fondo_2 {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Images/fondo_jugador2_maquina1.png");
+    background-size: cover;
+}
+#computer_logo {
+    width: 330px;
+    height: 330px;
+    background-image: url("./Images/Computer_image.png");
+}
+
+/**
+*  -------------------------------------------- Pagina jugador vs maquina ----------------------------------------
+*
+**/
+
+#fondo_3 {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Images/fondo_jugadores2.png");
+    background-size: cover;
+}
