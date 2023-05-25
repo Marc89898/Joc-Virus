@@ -210,7 +210,9 @@ export default class Controlador {
   comprovarGuanyador() {
     let contador = 0;
     for (let i = 0; i < 4; i++) {
-      if (this.game.jugador1.taula[i] != null) {
+      const carta_jugador1 = document.getElementsByClassName('carta_taula1');
+      const carta = carta_jugador1[i].querySelectorAll('img');
+      if (this.game.jugador1.taula[i] != null && carta.length === 1) {
         contador++;
       }
     }
@@ -219,7 +221,9 @@ export default class Controlador {
     }
     let contador1 = 0;
     for (let i = 0; i < 4; i++) {
-      if (this.game.jugador2.taula[i] != null) {
+      const carta_jugador2 = document.getElementsByClassName('carta_taula2');
+      const carta2 = carta_jugador2[i].querySelectorAll('img');
+      if (this.game.jugador2.taula[i] != null && carta2.length === 1) {
         contador1++;
       }
     }
