@@ -323,13 +323,13 @@ export default class Vista {
         e.target.insertAdjacentElement('afterend', carta);
         carta.draggable = false;
         handlerTreureVirusMaModel(torn, split[1], carta2);
-        this.comprovarVirus(torn, handlerVirusModel, deck);
+        this.comprovarVirus(torn, handlerVirusModel, deck, posicioOrganEnverinar, handlerAgafarCarta, cambiarTornHandler);
         this.treureAddEventsListenerCartes(torn);
         cambiarTornHandler();
       }
     });
   }
-  comprovarVirus(torn, handlerVirusModel, deck) {
+  comprovarVirus(torn, handlerVirusModel, deck, posicioOrganEnverinar, carta2, cambiarTorn) {
     if (torn === 'jugador1') {
       torn = 'jugador2';
     } else {
@@ -337,10 +337,15 @@ export default class Vista {
     }
     const taulaCartes = this.seleccioTaula(torn);
     for (let i = 0; i < taulaCartes.length; i++) {
-      const taula = taulaCartes[i].querySelectorAll('img');
-      if (taula.length >= 3) {
+      const taula = taulaCartes[posicioOrganEnverinar].querySelectorAll('img');
+      const split = taula[1].id.split('_'); // Aquesta linea dona error
+      if (taula.length >= 3 && split[0] === 'virus') {
         taulaCartes[i].innerHTML = '';
-        handlerVirusModel(torn, deck, i);
+        // handlerVirusModel(torn, deck, i);
+        cambiarTorn();
+      } else if (taula.length === 2 && split[0] === 'cura') {
+        taula[1].remove();
+        cambiarTorn();
       }
     }
   }

@@ -72,6 +72,8 @@ export default class Controlador {
       taulaContraria = this.game.jugador1.taula;
       ficarOrgan = this.game.jugador2.ficarOrganModel.bind(this.game.jugador2);
     }
+    console.log(carta);
+    console.log(taula);
     function permetreOrgan(carta) {
       for (let x = 0; x < 4; x++) {
         if (taula[x] != null) {
